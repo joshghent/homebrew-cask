@@ -1,6 +1,6 @@
 cask "opera" do
-  version "76.0.4017.94"
-  sha256 "f023b5e5b39137e2f1adac727463a4fcdd8b7bd7225a7c4b34b285014aa67668"
+  version "77.0.4054.254"
+  sha256 "4668e44fd90870d1699bad159542b0c0b8c1cfa7bd332a998a268a3ca90c0e85"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name "Opera"
@@ -9,8 +9,7 @@ cask "opera" do
 
   livecheck do
     url "https://ftp.opera.com/pub/opera/desktop/"
-    strategy :page_match
-    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
@@ -18,7 +17,7 @@ cask "opera" do
   app "Opera.app"
 
   zap trash: [
-    "~/Library/Preferences/com.operasoftware.Opera.plist",
     "~/Library/Application Support/com.operasoftware.Opera/",
+    "~/Library/Preferences/com.operasoftware.Opera.plist",
   ]
 end

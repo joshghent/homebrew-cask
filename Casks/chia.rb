@@ -1,6 +1,6 @@
 cask "chia" do
-  version "1.1.4"
-  sha256 "abc1ed6d1fadb60f490d2b76843e6ebedf6e2b3f8bfb6f227c28335ec37aa558"
+  version "1.2.2"
+  sha256 "cca0d22b03a7414d54bf8122dc18eecedbb67f3fb82f2188e3bf3fdd3fd1e279"
 
   url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}.dmg",
       verified: "github.com/Chia-Network/chia-blockchain/"

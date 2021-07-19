@@ -1,6 +1,6 @@
 cask "torguard" do
-  version "4.6.1"
-  sha256 "b5e8f1976f58b3819298088f67cc6d43c07b1c9a533080f00cbf86dd5a290628"
+  version "4.7.2"
+  sha256 "e263e13db820be1b634ba63ab8527d915ed9d986a9202b2fe8b04219089c2fed"
 
   url "https://updates.torguard.biz/Software/MacOSX/TorGuard-v#{version}.dmg",
       verified: "torguard.biz/"
@@ -10,8 +10,7 @@ cask "torguard" do
 
   livecheck do
     url "https://updates.torguard.biz/Software/MacOSX/checksums.sha256"
-    strategy :page_match
-    regex(/TorGuard-v(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/TorGuard[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"

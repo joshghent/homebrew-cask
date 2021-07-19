@@ -1,6 +1,6 @@
 cask "maltego" do
-  version "4.2.16.13775"
-  sha256 "be3161f13cc81d99357f17034fe396e8084ec249547ef1e81fd97a76b8ccc885"
+  version "4.2.18.13878"
+  sha256 "ab0059f7d17ee908a9e09a7abf7d62324b593dbb0a635d72bc020d3572087de0"
 
   url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
       verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"

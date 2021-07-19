@@ -1,6 +1,6 @@
 cask "recut" do
-  version "1.1.2,364"
-  sha256 "1f6d33a99a74422db9cb8fdee09b6ba8b3690a3661fdf6f284733278765e87ac"
+  version "2.0.4,563"
+  sha256 "8fbcf9953d4875efdaa208f3d64a14b4005c80bf209a763b25f880d821ceb82f"
 
   url "https://updates.getrecut.com/Recut-#{version.before_comma}.dmg"
   name "Recut"

@@ -1,8 +1,16 @@
 cask "tempo" do
-  version "5.14.0"
-  sha256 "4683ab958633cbe5054dc7a86166d8752f69e17eeb7bd65deb73bf84195f87aa"
+  version "5.21.0"
 
-  url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "6464b0fd2a0f9a3cc021e268456974d0596425484ead28e9cd9d865b21b1bed7"
+
+    url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
+  else
+    sha256 "91e01e2ac220847de82ba1da7ae0392fb5eaa3d7cd0f31ab88753da2cf575ab3"
+
+    url "https://download.yourtempo.co/release-arm64/Tempo-#{version}.dmg"
+  end
+
   name "Tempo"
   desc "Email client that delivers all email in batches"
   homepage "https://www.yourtempo.co/"

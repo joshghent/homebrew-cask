@@ -1,6 +1,6 @@
 cask "portfolioperformance" do
-  version "0.52.0"
-  sha256 "bd24488939981d1538d1b2f8b0d8b4819bdacf59cfdd6d98d2b73ec26e8840e5"
+  version "0.54.0"
+  sha256 "ddb45bf4231c40a8a8dd9f574253ded3b609dda1e74cabaad9c0d27aff108ad8"
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}.dmg",
       verified: "github.com/buchen/portfolio/"
@@ -10,8 +10,7 @@ cask "portfolioperformance" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/)
   end
 
   auto_updates true

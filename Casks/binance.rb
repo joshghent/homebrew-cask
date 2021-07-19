@@ -1,6 +1,6 @@
 cask "binance" do
-  version "1.15.4"
-  sha256 "15f2c1ea1317730c0b31b7165f966662b615a80e3b414b9f717df803e958a3f2"
+  version "1.20.1"
+  sha256 "09bd02824e6ee09ea737f8a9052fadfa9fb955670941afc5968e033a017e9f46"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
   name "Binance"
@@ -11,6 +11,9 @@ cask "binance" do
     url "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Binance.app"
 

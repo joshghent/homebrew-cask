@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.5.6"
-  sha256 "1486819a9ac5eaaabbbed117dd9af55762f05df12260866d94af51d1429916d8"
+  version "7.6"
+  sha256 "e1e332ec84568b1735b18d2e3f5b77fa001323e87945f1c05b44282c450707c6"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -9,11 +9,11 @@ cask "arq" do
 
   livecheck do
     url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   pkg "Arq#{version}.pkg"
 

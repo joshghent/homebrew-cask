@@ -1,6 +1,6 @@
 cask "rhino" do
-  version "7.5.21100.03002"
-  sha256 "15fc9813a7a67c033c4f0439edba0fbe0052724e64c90dd934ff158a9f26ab23"
+  version "7.8.21196.05002"
+  sha256 "7dafd36f96bfff3eeccf0e80efe92844c68a0eabb7d02e20d44be6aa4987144d"
 
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
       verified: "mcneel.com/"
@@ -14,6 +14,7 @@ cask "rhino" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Rhino #{version.major}.app"
 

@@ -1,6 +1,6 @@
 cask "simtoolkitpro" do
-  version "0.6.76"
-  sha256 "b8e24ffaefb2eab1d75ef8838a4059ec5746eb82f9d3613c77dd064174246d29"
+  version "0.6.84"
+  sha256 "dceb06188e03a1c324c085b0466f39b1cc8fe986dea364e43af1fcaf1c9ae4ae"
 
   url "https://simtoolkitpro-cdn.net/automated-builds/SimToolkitPro-#{version}.Setup.dmg",
       verified: "simtoolkitpro-cdn.net/"
@@ -11,7 +11,7 @@ cask "simtoolkitpro" do
   livecheck do
     url "https://simtoolkitpro.co.uk/download/mac"
     strategy :header_match
-    regex(/SimToolkitPro-(\d+(?:\.\d+)*).Setup\.dmg/i)
+    regex(/SimToolkitPro[._-]?v?(\d+(?:\.\d+)+)[._-]Setup\.dmg/i)
   end
 
   app "SimToolkitPro.app"

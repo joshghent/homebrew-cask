@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.20.0.52955"
-  sha256 "c3c08893dce4f8d4a89e159d2a8d79f68b695ffb288ef79ef3548ca832af14e2"
+  version "2.22.0.52989"
+  sha256 "03a92d256508c07908b3ad1a7ae7c83b122ddb273a23e7a97f2b87565d125335"
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo_V#{version}.dmg"
   name "QQLive"
@@ -11,8 +11,7 @@ cask "qqlive" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/TencentVideo_V(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/TencentVideo[._-]V?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

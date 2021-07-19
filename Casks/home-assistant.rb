@@ -1,6 +1,6 @@
 cask "home-assistant" do
-  version "2021.4.1,2021.115"
-  sha256 "f02b878058ebda9a7138e093ebd0e88bf715205de628db3dea1ce7a854a4dda3"
+  version "2021.7,2021.202"
+  sha256 "ad1d58252b9930f04d8c3dbf7bcad51143e4c086c22329479515b39b6dd62334"
 
   url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.before_comma}%2F#{version.after_comma}/home-assistant-mac.zip",
       verified: "github.com/home-assistant/iOS/"

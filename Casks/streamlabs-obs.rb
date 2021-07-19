@@ -1,6 +1,6 @@
 cask "streamlabs-obs" do
-  version "1.0.2"
-  sha256 "5815ac45482a1427ea5ad30c6233cba5670e0a6ad4014a7873cec639c34f66a2"
+  version "1.1.2"
+  sha256 "26b2fa394fbe1edb7d3665a9fde6608967bf6e3c753dd5def52a3c871aed2d17"
 
   url "https://slobs-cdn.streamlabs.com/Streamlabs+OBS-#{version}.dmg"
   name "Streamlabs OBS"
@@ -13,6 +13,7 @@ cask "streamlabs-obs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Streamlabs OBS.app"
 

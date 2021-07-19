@@ -1,9 +1,10 @@
 cask "avocode" do
-  version "4.13.2"
-  sha256 "b833ba3a012ce4ecd1491d51e0e01996765b3aeb26395a324f161a8b90d220fa"
+  version "4.15.0"
+  sha256 "29b0e1cafde2833ea040e934f4568f09cb2f591bd6ccb7f84438b1a902f774ea"
 
   url "https://media.avocode.com/download/avocode-app/#{version}/Avocode-#{version}-mac.zip"
   name "Avocode"
+  desc "Collaborate on design files"
   homepage "https://avocode.com/"
 
   livecheck do
@@ -12,6 +13,7 @@ cask "avocode" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Avocode.app"
 

@@ -1,6 +1,6 @@
 cask "visual-studio" do
-  version "8.9.7.8"
-  sha256 "a77e36b823eb429bf4a56cef13a728ac9b6a1deca20456f2a64deb178aed57e4"
+  version "8.10.6.10"
+  sha256 "c059991e7cc1e75f709e79319e4a8fb416a6fa995c042d44bb4a7348cfbd11c5"
 
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg",
       verified: "dl.xamarin.com/VsMac/"
@@ -10,12 +10,7 @@ cask "visual-studio" do
 
   livecheck do
     url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
-    strategy :page_match do |page|
-      match = page.match(
-        /Visual\sStudio\s(\d+(?:\.\d+)*)\sfor\sMac\sversion\s(\d+(?:\.\d+)*)\s\((\d+(?:\.\d+)*)\)/i,
-      )
-      (match[3]).to_s
-    end
+    regex(/Visual\s*Studio\s*\d+\s+for\s+Mac\s+version\s+\d+(?:\.\d+)*\s+\((\d+(?:\.\d+)+)\)/i)
   end
 
   auto_updates true
@@ -25,15 +20,15 @@ cask "visual-studio" do
   app "Visual Studio.app"
 
   zap trash: [
-    "/Applications/Xamarin Workbooks.app",
     "/Applications/Xamarin Profiler.app",
-    "~/Library/Application Support/VisualStudio",
+    "/Applications/Xamarin Workbooks.app",
     "~/Library/Application Support/CrashReporter/VisualStudio*",
+    "~/Library/Application Support/VisualStudio",
     "~/Library/Caches/VisualStudio",
+    "~/Library/Developer/Xamarin",
     "~/Library/Logs/VisualStudio",
     "~/Library/Preferences/Visual*Studio",
     "~/Library/Preferences/Xamarin",
-    "~/Library/Developer/Xamarin",
     "~/Library/VisualStudio",
   ]
 end

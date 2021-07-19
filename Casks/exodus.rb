@@ -1,6 +1,6 @@
 cask "exodus" do
-  version "21.4.23"
-  sha256 "b6c863f0977764f4501cef5c44602948f851d459cc49a3bf3439d51ac5fb1e68"
+  version "21.7.17"
+  sha256 "b452305d933d4c7573be9d845337c0457035914f45992d8681c371f59f0df8b0"
 
   url "https://downloads.exodus.com/releases/exodus-macos-#{version}.dmg"
   name "Exodus"
@@ -9,8 +9,7 @@ cask "exodus" do
 
   livecheck do
     url "https://www.exodus.com/releases/"
-    strategy :page_match
-    regex(/new\s*in.*?(\d+(?:\.\d+)*)/i)
+    regex(%r{/hashes[._-]exodus[._-]?v?(\d+(?:\.\d+)+)\.txt}i)
   end
 
   auto_updates true
